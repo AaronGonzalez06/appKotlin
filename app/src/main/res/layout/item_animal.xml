@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/colorPrimaryDark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivAnimal"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBoton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="foto"
+            android:tag="imagenOne"
+            android:textColor="@color/black"
+            android:elevation="4dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivAnimal"
+            app:layout_constraintTop_toBottomOf="@+id/ivAnimal"
+            app:icon="@drawable/baseline_pets_24" />
+
+        <TextView
+            android:id="@+id/tvNombreAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="@+id/ivAnimal"
+            app:layout_constraintTop_toBottomOf="@+id/ivAnimal" />
+
+        <TextView
+            android:id="@+id/tvEspecieAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="@+id/tvNombreAnimal"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreAnimal" />
+
+        <TextView
+            android:id="@+id/tvTipoAnimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="@+id/tvEspecieAnimal"
+            app:layout_constraintTop_toBottomOf="@+id/tvEspecieAnimal" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="3"
+            android:isIndicator="true"
+            app:layout_constraintStart_toStartOf="@+id/tvTipoAnimal"
+            app:layout_constraintTop_toBottomOf="@+id/tvTipoAnimal"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

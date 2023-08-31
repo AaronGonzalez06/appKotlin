@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
+    tools:context=".HorizontalFiltro">
+
+    <TextView
+        android:id="@+id/tvfiltrado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultados"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_gravity="top"/>
+
+    <TextView
+        android:id="@+id/tvtipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo:"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/tvfiltrado"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="top"/>
+
+    <TextView
+        android:id="@+id/tvpeligro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Peligrosidad:"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/tvtipo"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="top"/>
+
+    <TextView
+        android:id="@+id/tvtotalresultados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total de resultados:"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/tvpeligro"
+        android:layout_marginTop="95dp"
+        android:layout_gravity="top"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vertical_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal"
+        android:layout_below="@id/tvtipo"
+        android:layout_marginTop="135dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</FrameLayout>

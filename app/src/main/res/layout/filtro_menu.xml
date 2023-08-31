@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo2">
+
+    <TextView
+        android:id="@+id/tv_filtro_animales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filtro de animales"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tv_tipo_animal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de animal"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_filtro_animales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:id="@+id/linea1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_tipo_animal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <CheckBox
+            android:id="@+id/cb_mamiferos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mamiferos"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:id="@+id/cb_aves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aves"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:id="@+id/cb_reptiles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retiles"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_peligrosidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nivel de peligrosidad"
+        app:layout_constraintTop_toBottomOf="@id/linea1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:id="@+id/liena2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_peligrosidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <CheckBox
+            android:id="@+id/cb_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="1"/>
+
+        <CheckBox
+            android:id="@+id/cb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="2"/>
+
+        <CheckBox
+            android:id="@+id/cb_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="3"/>
+
+        <CheckBox
+            android:id="@+id/cb_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="4"/>
+
+        <CheckBox
+            android:id="@+id/cb_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/liena3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/liena2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Nombre :"/>
+
+        <EditText
+            android:id="@+id/et_nombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:hint="Animal"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:elevation="4dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/liena3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        app:icon="@drawable/baseline_search_24" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
